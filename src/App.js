@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter, Routes,Route} from 'react-router-dom';
+import Main from './components/Main';
+import Home from './routes/Home';
+import Bodas from './routes/Bodas';
+import Calendario from './routes/Calendario';
+import Mailbox from './routes/Mailbox';
+import NotFound from './routes/NotFound';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+          <Routes>
+              <Route path='/' element={<Main/>}>
+                  <Route index element={<Home/>}/>
+                  <Route path="bodas" element={<Bodas/>}/>
+                  <Route path='calendario' element={<Calendario/>}/>
+                  <Route path='mailbox' element={<Mailbox/>}/>
+                  <Route path='*' element={<NotFound/>}/>
+              </Route>
+          </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
