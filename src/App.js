@@ -5,6 +5,7 @@ import Bodas from './routes/Bodas';
 import Calendario from './routes/Calendario';
 import Mailbox from './routes/Mailbox';
 import NotFound from './routes/NotFound';
+import Login from './components/Login';
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
                   <Route path="bodas" element={<Bodas/>}/>
                   <Route path='calendario' element={<Calendario/>}/>
                   <Route path='mailbox' element={<Mailbox/>}/>
+                  <Route path='login' element={<Login/>}/>
                   <Route path='*' element={<NotFound/>}/>
               </Route>
           </Routes>
