@@ -60,7 +60,7 @@ header{
     align-items: center;
 }
 .titulo a{
-    color: rgb(153, 133, 66);
+    color: rgb(235, 129, 203);
 }
 .titulo h2{
     padding: 0.5rem;
@@ -83,7 +83,7 @@ header nav ul{
 }
 
 header nav ul li i{
-    color: rgb(153, 133, 66);
+    color: rgb(235, 129, 203);
     font-size: 1.2rem;
 }
 .ocultar-menu{
@@ -150,7 +150,7 @@ aside{
 }
 
 .sidebar-nav ul li a:hover{
-    color:rgb(153, 133, 66);
+    color:rgb(235, 129, 203);
 }
 
 .item{
@@ -261,7 +261,7 @@ aside{
     text-align: left;
     font-size: 1rem;
     padding: 0.5rem;
-    color:rgb(153, 133, 66);
+    color:rgb(235, 129, 203);
 }
 table{
     width: 100%;
@@ -308,7 +308,7 @@ tr:nth-child(even){
 footer{
     grid-column: 2/3;
     grid-row: 3/4;
-    background-color: rgb(153, 133, 66);
+    background-color: rgb(235, 129, 203);
     color: rgb(255, 255, 255);
     font-weight: 900;
     text-align: center;

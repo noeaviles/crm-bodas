@@ -8,6 +8,11 @@ import {Outlet} from 'react-router-dom';
 export const Main = () => {
 
     const [asideStatus,setAsideStatus] = useState(false)
+    const [tituloHeader,setTituloHeader]= useState('Dashboard') 
+
+    const changeTituloHeader = (titulo)=>{
+        setTituloHeader(titulo);
+    }
 
     const asideCollapse = ()=>{
         if(asideStatus){
@@ -19,8 +24,8 @@ export const Main = () => {
 
   return (
     <div className={asideStatus ? "close-main":'expand-main'}>
-            <Header asideCollapse={asideCollapse}/>
-            <Aside asideStatus={asideStatus}/>
+            <Header asideCollapse={asideCollapse} tituloHeader={tituloHeader}/>
+            <Aside asideStatus={asideStatus} changeTituloHeader={changeTituloHeader}/>
             <div className='content'>
                 <Outlet/>
             </div>
