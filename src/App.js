@@ -17,7 +17,6 @@ function App() {
                   <Route path="bodas" element={<Bodas/>}/>
                   <Route path='calendario' element={<Calendario/>}/>
                   <Route path='mailbox' element={<Mailbox/>}/>
-                  <Route path='login' element={<Login/>}/>
                   <Route path='*' element={<NotFound/>}/>
               </Route>
           </Routes>

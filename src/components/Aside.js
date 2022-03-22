@@ -1,13 +1,12 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
-
+import imgLogo from '../assets/logo-dorado.png'
 const Aside = ({asideStatus,changeTituloHeader}) => {
     
   return (
     <>
         <aside>
-            <div className={asideStatus === true ? "close-menu":"logo expand-menu"}><figcaption><img src='#'/></figcaption></div>
-            <div className="isotipo"><figcaption><img src=" "alt=""/></figcaption></div>
+            <div className={asideStatus === true ? "close-menu":"logo expand-menu"}><figcaption><img src={imgLogo}/></figcaption></div>
             <nav className="sidebar-nav">
                 <ul>
                     <li  className={asideStatus === true ? "close-menu":"menu-title expand-menu"}>--Menu</li>
