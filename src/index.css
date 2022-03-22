@@ -187,16 +187,71 @@ aside{
     grid-column: 1/5;
     grid-row: 1/2;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.enlace-seccion1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enlace-seccion1 i{
+    font-size: 4rem;
+    padding: 1rem;
+    color: rgb(214, 16, 16);
+}
+.seccion1 div p{
+    text-align: center;
+    color: rgb(214, 16, 16);
+    font-size: 20px;
+}
+.seccion1 div :nth-child(3){
+    text-align: center;
+    color: rgb(0,0,0);
+    font-size: 15px;
+}
+
 .seccion2{
     grid-column: 5/9;
     grid-row: 1/2;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seccion2 h2{
+    color: rgb(209, 189, 9);
+    font-size: 5rem;
+    padding: 1rem;
+}
+.seccion2 div p{
+    text-align: center;
+    color: rgb(214, 16, 16);
+    font-size: 25px;
 }
 .seccion3{
     grid-column: 9/13;
     grid-row: 1/2;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enlace-seccion3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enlace-seccion3 i{
+    font-size: 4rem;
+    padding: 1rem;
+    color: rgb(53, 187, 13);
+}
+.seccion3 div :nth-child(2){
+    text-align: center;
+    color: rgb(0,0,0);
+    font-size: 15px;
 }
 .seccion4{
     grid-column: 1/9;

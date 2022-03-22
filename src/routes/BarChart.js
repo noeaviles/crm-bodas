@@ -43,7 +43,7 @@ export default function LineChart(){
                 return{
                     datasets:[
                         {
-                            label:"Bodas Activas",
+                            label:"Bodas Confirmadas 2022",
                             data:scores,
                             tension:0.3,
                             borderColor:"rgb(75,192,192)",
