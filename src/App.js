@@ -12,12 +12,12 @@ function App() {
     <>
       <BrowserRouter>
           <Routes>
-              <Route path='/' element={<Main/>}>
-                  <Route index element={<Home/>}/>
-                  <Route path="bodas" element={<Bodas/>}/>
-                  <Route path='calendario' element={<Calendario/>}/>
-                  <Route path='mailbox' element={<Mailbox/>}/>
-                  <Route path='*' element={<NotFound/>}/>
+              <Route path='/' element={ <Main/> }>
+                  <Route index element={ <Home/> }/>
+                  <Route path="bodas" element={ <Bodas/> }/>
+                  <Route path='calendario' element={ <Calendario/> }/>
+                  <Route path='mailbox' element={ <Mailbox/> }/>
+                  <Route path='*' element={ <NotFound/> }/>
               </Route>
           </Routes>
       </BrowserRouter>

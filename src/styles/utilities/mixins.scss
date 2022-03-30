@@ -1,0 +1,13 @@
+/*BreakPoints*/
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'medium' {
+    @media (min-width: $bp-new-medium) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'high' {
+    @media (min-width: $bp-new-large) {
+      @content;
+    }
+  }
+}

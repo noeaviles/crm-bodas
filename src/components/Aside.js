@@ -1,25 +1,59 @@
 import React from 'react';
 import { NavLink} from 'react-router-dom';
-import imgLogo from '../assets/logo-dorado.png'
+
 const Aside = ({asideStatus,changeTituloHeader}) => {
     
   return (
-    <>
-        <aside>
-            <div className={asideStatus === true ? "close-menu":"logo expand-menu"}><figcaption><img src={imgLogo}/></figcaption></div>
-            <nav className="sidebar-nav">
-                <ul>
-                    <li  className={asideStatus === true ? "close-menu":"menu-title expand-menu"}>--Menu</li>
-                    <li className="item-menu"><NavLink to='/' onClick={()=>changeTituloHeader('Dashboard')}><div className={asideStatus === true ? "item-close":"item"}><i className="fa-solid fa-desktop" title="Dashboard"></i><span className={asideStatus === true ? "close-menu":"logo expand-menu"}>Dashboard</span></div> </NavLink></li>
-                    <li className="item-menu"><NavLink to='/bodas' onClick={()=>changeTituloHeader('Bodas')}><div className={asideStatus === true ? "item-close":"item"} ><i className="fa-solid fa-address-book" title="Bodas"></i><span className={asideStatus === true ? "close-menu":"logo expand-menu"}>Bodas</span></div></NavLink></li>
-                    <li className="item-menu"><NavLink to='/calendario' onClick={()=>changeTituloHeader('Calendario')}><div className={asideStatus === true ? "item-close":"item"}><i class="fa-solid fa-calendar-days" title="Calendario"></i><span className={asideStatus === true ? "close-menu":"logo expand-menu"}>Calendario</span></div></NavLink></li>
-                    <li className="item-menu"><NavLink to='/mailbox' onClick={()=>changeTituloHeader('Mailbox')}><div className={asideStatus === true ? "item-close":"item"}><i className="fa-solid fa-envelope" title="Mailbox"></i><span className={asideStatus === true ? "close-menu":"logo expand-menu"}>Mailbox</span></div></NavLink></li>
-
-                </ul>
-            </nav>
-        </aside>
-        
-    </>
+    <aside className={`sidebar ${ asideStatus && 'collapseMenu'}`}>
+      <div className="sidebar_header">
+        <h1 className='sidebar_header-hello'>Good Morning, Anna!</h1>
+        <div style={ {backgroundImage: `url("https://p.favim.com/orig/2018/09/04/tumblr-girl-woman-Favim.com-6240727.jpg")` } } className="sidebar_header-imagenPerfil"></div>
+      </div>
+      <nav className="sidebar-nav">
+        <ul>
+          <li className="item-menu">
+            <NavLink to='/' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Dashboard') }>
+              <div className='item' >
+                <i className="fa-solid fa-desktop" title="Dashboard"></i>
+                <span className="logo expand-menu">
+                  Dashboard
+                </span>
+              </div> 
+            </NavLink>
+          </li>
+          <li className="item-menu">
+            <NavLink to='/bodas' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Bodas') }>
+              <div className='item' >
+                <i className="fa-solid fa-address-book" title="Bodas"></i>
+                <span className="logo expand-menu">
+                  Bodas
+                </span>
+              </div>
+            </NavLink>
+          </li>
+          <li className="item-menu">
+            <NavLink to='/calendario' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Calendario') }>
+              <div className='item'>
+                <i className="fa-solid fa-calendar-days" title="Calendario"></i>
+                <span className="logo expand-menu">
+                  Calendario
+                </span>
+              </div>
+            </NavLink>
+          </li>
+          <li className="item-menu">
+            <NavLink to='/mailbox' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Mailbox') }>
+              <div className='item'>
+                <i className="fa-solid fa-envelope" title="Mailbox"></i>
+                <span className="logo expand-menu">
+                  Mailbox
+                </span>
+              </div>
+          </NavLink>
+        </li>
+        </ul>
+      </nav>
+    </aside>
   )
 }
 

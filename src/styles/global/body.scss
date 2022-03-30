@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  background-color: $grey-light;
+  font-family: 'Poppins', sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 185, 185);
+    border-radius: 1rem; 
+  }
+}
+
+/* Comienza header content */
+.header_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &-subMenu {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  &-titulo {
+    &-collapse {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding: 1rem 2rem 1rem 2rem;
+    justify-content: space-between;
+
+    &-titulo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &-collapse {
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+}
+
+.wrapper-body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/*Contenedor Main*/
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+.container-home {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  padding: 1rem;
+  grid-auto-rows: minmax(15rem, 22rem);
+}
+.card { 
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.feactured {
+  grid-column: span 1;
+  @include breakpoint(medium) {
+    grid-column: span 2;
+  }
+}
+
+/*Comienza el aside*/
+.sidebar {
+  background-color: $white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+
+  &_header {
+    display: none;
+  }
+
+  &-nav {
+    font-weight: 800;
+    width: 100%;
+    border-top: 1px solid $grey;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      height: 100%;
+      align-items: center;
+
+      li a {
+        width: 100%;
+        text-decoration: none;
+        color: rgb(158, 156, 156);
+        font-size: 16px;
+      }
+
+    } 
+    
+    .item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+      gap: 0.5rem;
+      height: 100%;
+      width: 100%;
+      transition: ease-in 0.3s;
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding-top: 2rem;
+    position: relative;
+    transition: ease-in 0.5s;
+    width: 300px;
+    flex-direction: column;
+    height: 100vh;
+
+    &_header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      
+      &-hello {
+        font-size: 1rem;
+        max-width: 150px;
+      }
+
+      &-imagenPerfil {
+        background-color: red;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    &-nav {
+      border: none;
+      margin-top: 2rem;
+
+      ul {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        list-style-type: none;
+        gap: 1rem;
+
+        li {
+          height: 50px;
+          padding: 0 1.5rem 0 1.5rem;
+          width: 100%;
+
+          a {
+            width: 100%;
+            text-decoration: none;
+            color: rgb(158, 156, 156);
+            font-size: 16px;
+          }
+        }
+
+        .item {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          font-size: 1rem;
+          gap: 1rem;
+          height: 100%;
+          width: 100%;
+        }
+
+        .active {
+          .item{
+            color: $orange;
+          }
+        }
+      } 
+    }
+  }
+
+  &.collapseMenu {
+    margin-left: -300px;
+  }
+}
+
+
+
