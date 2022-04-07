@@ -3,7 +3,9 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className='heroHome'>
-      aqui va el hero
+      <h3>
+        Bienvenidos a ...
+      </h3>
     </div>
   );
 }

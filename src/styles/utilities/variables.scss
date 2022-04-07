@@ -1,8 +1,12 @@
 /* Colors */
-$white: #ffff;
+$black: #000000;
+$black-opacity: rgba(0, 0, 0, 0.8);
+$white: #ffffff;
+$white-opacity: rgba(255, 255, 255, 0.8);
 $grey: #d6d4d4;
 $grey-light: #f3f3f3;
 $orange: #EC6445;
+$orange-dark: #DE674C;
 /* Medias */
 $bp-new-small: 320px !default;
 $bp-new-medium-simple: 640px !default;
@@ -12,3 +16,7 @@ $bp-new-medium-high: 1024px !default;
 $bp-new-large: 1280px !default;
 $bp-new-xlarge: 1440px !default;
 $bp-new-homepage-max: 2000px !default;
+
+
+/* Z-index */
+$zindex-modal: 100;

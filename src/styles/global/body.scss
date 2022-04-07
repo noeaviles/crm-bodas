@@ -226,5 +226,30 @@ body {
   }
 }
 
+/* MODAL */
+.modal {
+  align-items: center;
+  background-color: $black-opacity;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left:0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-modal;
+
+  &-wrapper {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 1rem;
+
+    &-button {
+      display: flex;
+      justify-content: end;
+      cursor: pointer;
+    }
+  }
+}
 
 

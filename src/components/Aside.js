@@ -12,7 +12,7 @@ const Aside = ({asideStatus,changeTituloHeader}) => {
       <nav className="sidebar-nav">
         <ul>
           <li className="item-menu">
-            <NavLink to='/' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Dashboard') }>
+            <NavLink to='/dashboard' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Dashboard') }>
               <div className='item' >
                 <i className="fa-solid fa-desktop" title="Dashboard"></i>
                 <span className="logo expand-menu">
@@ -22,7 +22,7 @@ const Aside = ({asideStatus,changeTituloHeader}) => {
             </NavLink>
           </li>
           <li className="item-menu">
-            <NavLink to='/bodas' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Bodas') }>
+            <NavLink to='/dashboard/bodas' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Bodas') }>
               <div className='item' >
                 <i className="fa-solid fa-address-book" title="Bodas"></i>
                 <span className="logo expand-menu">
@@ -32,7 +32,7 @@ const Aside = ({asideStatus,changeTituloHeader}) => {
             </NavLink>
           </li>
           <li className="item-menu">
-            <NavLink to='/calendario' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Calendario') }>
+            <NavLink to='/dashboard/calendario' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Calendario') }>
               <div className='item'>
                 <i className="fa-solid fa-calendar-days" title="Calendario"></i>
                 <span className="logo expand-menu">
@@ -42,7 +42,7 @@ const Aside = ({asideStatus,changeTituloHeader}) => {
             </NavLink>
           </li>
           <li className="item-menu">
-            <NavLink to='/mailbox' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Mailbox') }>
+            <NavLink to='/dashboard/mailbox' className={ ({isActive}) => isActive && 'active' } onClick={ ()=>changeTituloHeader('Mailbox') }>
               <div className='item'>
                 <i className="fa-solid fa-envelope" title="Mailbox"></i>
                 <span className="logo expand-menu">
